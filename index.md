@@ -147,7 +147,7 @@ Most of neural vocoders use band-limited mel-spectrograms to generate waveforms.
     </tbody>
 </table>
 
-## text-to-speech ('LJSpeech' dataset)
+## Text-to-speech ('LJSpeech' dataset)
 * For text-to-speech evaluation, we used [JDI-T](https://arxiv.org/abs/2005.07799) acoustic model with a pitch and energy predictor.  
 * Each trained vocoder was fine-tuned up to 100k steps using ground truth waveforms and predicted log-mel-spectrograms.  
 * Note that we predicted the log-mel-spectrograms by using text, reference duration, ground truth pitch and energy.  
