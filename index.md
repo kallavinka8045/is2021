@@ -209,6 +209,8 @@ Note that we predicted the log-mel-spectrograms by using text, reference duratio
 </table>
 
 # Ablation study
+The components of generator and discriminators are represented by following index symbols for brevity: G1=LVC; G2=GAU; D1=MRSD; D2=MPWD and D3=MSWD.  
+
 <table>
     <thead>
         <th>Instances</th>
