@@ -82,7 +82,7 @@ We watched the training process of MelGAN and trained up to 2M steps to make sta
     </tbody>
 </table>
 
-## Unseen speakers
+## Unseen speakers ('LibriTTS/test-clean' dataset)
 <table>
     <thead>
         <th>Models</th>
@@ -208,7 +208,7 @@ Note that we predicted the log-mel-spectrograms by using text, reference duratio
     </tbody>
 </table>
 
-# Ablation study
+# Ablation study ('LibriTTS/train-clean-360' dataset)
 The components of generator and discriminators are represented by following index symbols for brevity: G1=LVC; G2=GAU; D1=MRSD; D2=MPWD and D3=MSWD.  
 
 <table>
