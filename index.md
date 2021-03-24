@@ -273,8 +273,7 @@ The components of generator and discriminators are represented by following inde
             <td><audio controls style="width: 150px;"><source src="wav_for_demo/ablation/wo_mpwd/tbd.wav" type="audio/wav"></audio></td>
         </tr>
     </tbody>
-    </tbody>
-        <tbody>
+    <tbody>
         <tr>
             <th>With MSWD</th>
             <td><audio controls style="width: 150px;"><source src="wav_for_demo/ablation/w_mswd/tbd.wav" type="audio/wav"></audio></td>
@@ -283,8 +282,7 @@ The components of generator and discriminators are represented by following inde
             <td><audio controls style="width: 150px;"><source src="wav_for_demo/ablation/w_mswd/tbd.wav" type="audio/wav"></audio></td>
         </tr>
     </tbody>
-    </tbody>
-        <tbody>
+    <tbody>
         <tr>
             <th>MPWD->MSWD</th>
             <td><audio controls style="width: 150px;"><source src="wav_for_demo/ablation/mpwd_to_mswd/tbd.wav" type="audio/wav"></audio></td>
