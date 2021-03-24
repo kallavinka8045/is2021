@@ -227,7 +227,7 @@ The components of generator and discriminators are represented by following inde
     <tbody>
         <tr>
             <th>Recordings</th>
-            <th>\checkmark</th>
+            <th>&#10003;</th>
             <td><audio controls style="width: 150px;"><source src="wav_for_demo/ablation/ground_truth/tbd.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 150px;"><source src="wav_for_demo/ablation/ground_truth/tbd.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 150px;"><source src="wav_for_demo/ablation/ground_truth/tbd.wav" type="audio/wav"></audio></td>
