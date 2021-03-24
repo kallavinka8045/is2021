@@ -214,6 +214,11 @@ The components of generator and discriminators are represented by following inde
 <table>
     <thead>
         <th>Instances</th>
+        <th>G1</th>
+        <th>G2</th>
+        <th>D1</th>
+        <th>D2</th>
+        <th>D3</th>
         <th>#1</th>
         <th>#2</th>
         <th>#3</th>
@@ -222,6 +227,7 @@ The components of generator and discriminators are represented by following inde
     <tbody>
         <tr>
             <th>Recordings</th>
+            <th>\checkmark</th>
             <td><audio controls style="width: 150px;"><source src="wav_for_demo/ablation/ground_truth/tbd.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 150px;"><source src="wav_for_demo/ablation/ground_truth/tbd.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 150px;"><source src="wav_for_demo/ablation/ground_truth/tbd.wav" type="audio/wav"></audio></td>
