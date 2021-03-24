@@ -17,7 +17,7 @@ We watched the training process of MelGAN and trained up to 2M steps to make sta
 ‘train-clean-360’ subset consisting of 192 hours, 116k utterances and 904 speakers was used to train the model and evaluate the speakers used for training (seen speakers).  
 ‘test-clean’ subset consisting of 9 hours, 5k utterances and 39 speakers was used to evaluate the speakers not used for training (unseen speakers).  
 
-## Seen speakers
+## Seen speakers ('LibriTTS/train-clean-360' dataset)
 <table>
     <thead>
         <th>Models</th>
@@ -147,7 +147,7 @@ We watched the training process of MelGAN and trained up to 2M steps to make sta
     </tbody>
 </table>
 
-## text-to-speech
+## text-to-speech ('LJSpeech' dataset)
 For text-to-speech evaluation, we used [JDI-T](https://arxiv.org/abs/2005.07799) acoustic model with a pitch and energy predictor.  
 Each trained vocoder was fine-tuned up to 100k steps using ground truth waveforms and predicted log-mel-spectrograms.  
 Note that we predicted the log-mel-spectrograms by using text, reference duration, ground truth pitch and energy.  
