@@ -209,8 +209,6 @@ Most of neural vocoders use band-limited mel-spectrograms to generate waveforms.
 </table>
 
 # Ablation study ('LibriTTS/train-clean-360' dataset)
-* The components of generator and discriminators are represented by following index symbols for brevity:
-* G1=LVC; G2=GAU; D1=MRSD; D2=MPWD and D3=MSWD.  
 
 <table>
     <thead>
