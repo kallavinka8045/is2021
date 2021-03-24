@@ -4,7 +4,7 @@
 {:toc}
 
 # Abstract
-<img src="figure1.png" width="90%">
+<img src="figure1.png" width="100%">
 <img src="figure3.png" height="400px;">
 
 Most of neural vocoders use band-limited mel-spectrograms to generate waveforms. If full-band spectral features are used as input, the vocoder can be provided as much acoustic information as possible. However, in some models using full-band mel-spectrograms, an over-smoothing problem occurred in which non-sharp spectrograms were generated. To address the problem, We propose UnivNet, a neural vocoder that synthesizes high-fidelity waveform in real-time. Inspired by works in the field of voice activity detection, we added a multi-resolution spectrogram discriminator that uses multiple linear spectrogram magnitudes computed through various parameters. Under the condition of using full-band mel-spectrograms as input, we expect to be able to generate high resolution signals, by adding the discriminator that uses the spectrograms of multiple resolution as input. According to the evaluation on the dataset of hundreds of speakers, UnivNet obtained the best objective and subjective evaluation results among other GAN-based vocoders in both seen and unseen speakers. These results, including the best subjective score in fine-tuning scenario for text-to-speech, demonstrate the potential of fast adaptation to new speakers without training from scratch.
@@ -148,10 +148,10 @@ Most of neural vocoders use band-limited mel-spectrograms to generate waveforms.
 </table>
 
 ## text-to-speech ('LJSpeech' dataset)
-For text-to-speech evaluation, we used [JDI-T](https://arxiv.org/abs/2005.07799) acoustic model with a pitch and energy predictor.  
-Each trained vocoder was fine-tuned up to 100k steps using ground truth waveforms and predicted log-mel-spectrograms.  
-Note that we predicted the log-mel-spectrograms by using text, reference duration, ground truth pitch and energy.  
-[LJSpeech](https://keithito.com/LJ-Speech-Dataset/) dataset was used to train JDI-T and fine-tune each vocoder.  
+* For text-to-speech evaluation, we used [JDI-T](https://arxiv.org/abs/2005.07799) acoustic model with a pitch and energy predictor.  
+* Each trained vocoder was fine-tuned up to 100k steps using ground truth waveforms and predicted log-mel-spectrograms.  
+* Note that we predicted the log-mel-spectrograms by using text, reference duration, ground truth pitch and energy.  
+* [LJSpeech](https://keithito.com/LJ-Speech-Dataset/) dataset was used to train JDI-T and fine-tune each vocoder.  
 
 <table>
     <thead>
@@ -209,7 +209,8 @@ Note that we predicted the log-mel-spectrograms by using text, reference duratio
 </table>
 
 # Ablation study ('LibriTTS/train-clean-360' dataset)
-The components of generator and discriminators are represented by following index symbols for brevity: G1=LVC; G2=GAU; D1=MRSD; D2=MPWD and D3=MSWD.  
+* The components of generator and discriminators are represented by following index symbols for brevity:
+* G1=LVC; G2=GAU; D1=MRSD; D2=MPWD and D3=MSWD.  
 
 <table>
     <thead>
