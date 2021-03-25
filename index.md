@@ -11,8 +11,8 @@ Most of neural vocoders use band-limited mel-spectrograms to generate waveforms.
 
 # Comparison with existing models
 * [LibriTTS](https://openslr.org/60/) dataset is an English multi-speaker audiobook dataset.  
-* ‘train-clean-360’ subset consisting of 192 hours, 116k utterances and 904 speakers was used to train the model and evaluate the speakers used for training (seen speakers).  
-* ‘test-clean’ subset consisting of 9 hours, 5k utterances and 39 speakers was used to evaluate the speakers not used for training (unseen speakers).  
+* ‘train-clean-360’ subset was used to train the model and evaluate the speakers used for training (seen speakers).  
+* ‘test-clean’ subset was used to evaluate the speakers not used for training (unseen speakers).  
 
 ## Seen speakers ('LibriTTS/train-clean-360' dataset)
 <table>
@@ -146,7 +146,7 @@ Most of neural vocoders use band-limited mel-spectrograms to generate waveforms.
 
 ## Text-to-speech ('LJSpeech' dataset)
 * For text-to-speech evaluation, we used [JDI-T](https://arxiv.org/abs/2005.07799) acoustic model with a pitch and energy predictor.  
-* Each trained vocoder was fine-tuned up to 100k steps using ground truth waveforms and predicted log-mel-spectrograms.  
+* Each trained vocoder was fine-tuned using ground truth waveforms and predicted log-mel-spectrograms.  
 * Note that we predicted the log-mel-spectrograms by using text, reference duration, ground truth pitch and energy.  
 * [LJSpeech](https://keithito.com/LJ-Speech-Dataset/) dataset was used to train JDI-T and fine-tune each vocoder.  
 
