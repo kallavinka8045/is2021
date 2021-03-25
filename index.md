@@ -225,7 +225,12 @@ Most of neural vocoders use band-limited mel-spectrograms to generate waveforms.
     </tbody>
 </table>
 
-# Ablation study ('LibriTTS/train-clean-360' dataset)
+# Ablation study
+To demonstrate the validity of the proposed model configuration, we prepared instances with each component of the model removed.  
+We also evaluated with some combinations of discriminators including [multi-scale waveform discriminator (MSWD)](https://arxiv.org/abs/1910.06711).  
+UnivNet-c16, a lightweight version of the model, was used for comparison.  
+
+## Seen speakers ('LibriTTS/train-clean-360' dataset)
 
 <table>
     <thead>
