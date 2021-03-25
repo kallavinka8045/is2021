@@ -10,9 +10,6 @@
 Most of neural vocoders use band-limited mel-spectrograms to generate waveforms. If full-band spectral features are used as input, the vocoder can be provided as much acoustic information as possible. However, in some models using full-band mel-spectrograms, an over-smoothing problem occurred in which non-sharp spectrograms were generated. To address the problem, We propose UnivNet, a neural vocoder that synthesizes high-fidelity waveform in real-time. Inspired by works in the field of voice activity detection, we added a multi-resolution spectrogram discriminator that uses multiple linear spectrogram magnitudes computed through various parameters. Under the condition of using full-band mel-spectrograms as input, we expect to be able to generate high resolution signals, by adding the discriminator that uses the spectrograms of multiple resolution as input. According to the evaluation on the dataset of hundreds of speakers, UnivNet obtained the best objective and subjective evaluation results among other GAN-based vocoders in both seen and unseen speakers. These results, including the best subjective score in fine-tuning scenario for text-to-speech, demonstrate the potential of fast adaptation to new speakers without training from scratch.
 
 # Comparison with existing models
-* All models in experiments were trained using four NVIDIA V100 GPUs.  
-* We watched the training process of MelGAN and trained up to 2M steps to make stable sound quality, and the other models trained up to 1M steps.  
-
 * [LibriTTS](https://openslr.org/60/) dataset is an English multi-speaker audiobook dataset.  
 * ‘train-clean-360’ subset consisting of 192 hours, 116k utterances and 904 speakers was used to train the model and evaluate the speakers used for training (seen speakers).  
 * ‘test-clean’ subset consisting of 9 hours, 5k utterances and 39 speakers was used to evaluate the speakers not used for training (unseen speakers).  
