@@ -15,7 +15,7 @@ Most neural vocoders employ band-limited mel-spectrograms to generate waveforms.
 * The ‘test-clean’ subset was used to evaluate the speakers not used for training (unseen speakers).  
 
 ## Seen speakers ('LibriTTS/train-clean-360' dataset)
-<table>
+<table width="100%">
     <thead>
         <th>Models</th>
         <th>#1</th>
