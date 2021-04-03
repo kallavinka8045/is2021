@@ -7,12 +7,12 @@
 <img src="figure1.png" width="100%">
 <img src="figure3.png" width="50%;">
 
-Most of neural vocoders use band-limited mel-spectrograms to generate waveforms. If full-band spectral features are used as input, the vocoder can be provided as much acoustic information as possible. However, in some models using full-band mel-spectrograms, an over-smoothing problem occurred in which non-sharp spectrograms were generated. To address the problem, We propose UnivNet, a neural vocoder that synthesizes high-fidelity waveform in real-time. Inspired by works in the field of voice activity detection, we added a multi-resolution spectrogram discriminator that uses multiple linear spectrogram magnitudes computed through various parameters. Under the condition of using full-band mel-spectrograms as input, we expect to be able to generate high resolution signals, by adding the discriminator that uses the spectrograms of multiple resolution as input. According to the evaluation on the dataset of hundreds of speakers, UnivNet obtained the best objective and subjective evaluation results among other GAN-based vocoders in both seen and unseen speakers. These results, including the best subjective score in fine-tuning scenario for text-to-speech, demonstrate the potential of fast adaptation to new speakers without training from scratch.
+Most neural vocoders employ band-limited mel-spectrograms to generate waveforms. If full-band spectral features are used as the input, the vocoder can be provided with as much acoustic information as possible. However, in some models employing full-band mel-spectrograms, an over-smoothing problem occurs as part of which non-sharp spectrograms are generated. To address this problem, we propose UnivNet, a neural vocoder that synthesizes high-fidelity waveforms in real time. Inspired by works in the field of voice activity detection, we added a multi-resolution spectrogram discriminator that employs multiple linear spectrogram magnitudes computed using various parameter sets. Using full-band mel-spectrograms as input, we expect to generate high-resolution signals by adding a discriminator that employs spectrograms of multiple resolutions as the input. In an evaluation on a dataset containing information on hundreds of speakers, UnivNet obtained the best objective and subjective results among competing models for both seen and unseen speakers. These results, including the best subjective score for text-to-speech, demonstrate the potential for fast adaptation to new speakers without a need for training from scratch.
 
 # Comparison with existing models
-* [LibriTTS](https://openslr.org/60/) dataset is an English multi-speaker audiobook dataset.  
-* ‘train-clean-360’ subset was used to train the model and evaluate the speakers used for training (seen speakers).  
-* ‘test-clean’ subset was used to evaluate the speakers not used for training (unseen speakers).  
+* The [LibriTTS](https://openslr.org/60/) dataset is an English multi-speaker audiobook dataset.  
+* The ‘train-clean-360’ subset was used to train the model and evaluate the speakers used for training (seen speakers).  
+* The ‘test-clean’ subset was used to evaluate the speakers not used for training (unseen speakers).  
 
 ## Seen speakers ('LibriTTS/train-clean-360' dataset)
 <table>
@@ -160,9 +160,9 @@ Most of neural vocoders use band-limited mel-spectrograms to generate waveforms.
 
 ## Text-to-speech ('LJSpeech' dataset)
 * For text-to-speech evaluation, we used [JDI-T](https://arxiv.org/abs/2005.07799) acoustic model with a pitch and energy predictor.  
+* We converted text to phoneme sequences using [open-sourced software](https://github.com/bootphon/phonemizer).  
 * Each trained vocoder was fine-tuned using ground truth waveforms and predicted log-mel-spectrograms.  
-* Note that we predicted the log-mel-spectrograms by using text, reference duration, ground truth pitch and energy.  
-* [LJSpeech](https://keithito.com/LJ-Speech-Dataset/) dataset was used to train JDI-T and fine-tune each vocoder.  
+* The [LJSpeech](https://keithito.com/LJ-Speech-Dataset/) dataset was used to train JDI-T and fine-tune each vocoder.  
 
 <table>
     <thead>
@@ -226,9 +226,9 @@ Most of neural vocoders use band-limited mel-spectrograms to generate waveforms.
 </table>
 
 # Ablation study
-To demonstrate the validity of the proposed model configuration, we prepared instances with each component of the model removed.  
-We also evaluated with some combinations of discriminators including [multi-scale waveform discriminator (MSWD)](https://arxiv.org/abs/1910.06711).  
-UnivNet-c16, a lightweight version of the model, was used for comparison.  
+* To demonstrate the validity of the proposed model configuration, we prepared instances in which each component (i.e. LVC, GAU, MRSD and MPWD) of the model was removed.  
+* We also evaluated with some combinations of discriminators including [multi-scale waveform discriminator (MSWD)](https://arxiv.org/abs/1910.06711).  
+* UnivNet-c16, a lightweight version of the model, was used for comparison.  
 
 ## Seen speakers ('LibriTTS/train-clean-360' dataset)
 
